@@ -1,7 +1,7 @@
-var Nav = () => (
+var Nav = ({onClickSearchBar}) => (
   <nav className="navbar">
-    <div className="col-md-6 col-md-offset-3">
-      <Search />
+    <div className="col-md-6 col-md-offset-3 align-self-center">
+      <Search onClickSearchBar={onClickSearchBar}/>
     </div>
   </nav>
 );

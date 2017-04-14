@@ -1,18 +1,16 @@
-var VideoList = () => (
-  <div className="video-list media">
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
-    <VideoListEntry />
+var VideoList = (props) => (
+  <div className="video-list">
+    {props.videos.map((videoData) => 
+      <VideoListEntry 
+        onClickPlayListHandler={props.onClickPlayListHandler}
+        video={videoData}
+      />
+    )} 
   </div>
 );
 
-// PropTypes tell other developers what `props` a component expects
+
+// PropTypes tell other developers what `props` a component expects*/
 // Warnings will be shown in the console when the defined rules are violated
 VideoList.propTypes = {
   videos: React.PropTypes.array.isRequired
